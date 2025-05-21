@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аналітика товарів - ЇдемоСьогодні</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/analytics.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+             <a href="index.html" style="text-decoration: none; color: inherit;"><h1>ЇдемоСьогодні</h1></a>
+            <p>Аналітика популярності товарів</p>
+        </div>
+         <nav class="header-nav">
+            <a href="index.html" class="nav-icon" aria-label="Головна сторінка">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                </svg>
+                <span class="nav-icon-tooltip">Головна</span>
+            </a>
+        </nav>
+    </header>
+
+    <main class="analytics-main-container">
+        <div class="chart-controls">
+            <label for="chart-type-select">Обрати тип графіку:</label>
+            <select id="chart-type-select">
+                <option value="pie">Кругова діаграма (за категоріями)</option>
+                <option value="bar">Гістограма (кількість товарів за категоріями)</option>
+                <option value="line">Графік (ціновий розподіл товарів)</option>
+            </select>
+            <button id="update-chart-data-btn">Оновити дані з кошика</button>
+            <span class="chart-data-source-info">(Дані за замовчуванням: загальний каталог)</span>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="analyticsChart"></canvas>
+        </div>
+         <div class="chart-container hidden">
+            <canvas id="analyticsChartBar"></canvas>
+        </div>
+         <div class="chart-container hidden">
+            <canvas id="analyticsChartLine"></canvas>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 ЇдемоСьогодні. Всі права захищено.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/analytics.js"></script>
+</body>
+</html>
