@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 1,
             name: "Двигун V6 Turbo",
-            image: "images/engine.jpg",
+            image: "images/Engine.jpg",
             description: "Потужний та надійний турбований V-подібний двигун об'ємом 3.0л. Підходить для спортивних автомобілів та позашляховиків.",
             category: "engine",
             price: 25000
